@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Task Management Dashboard</h1>
+        <input type="text" id="taskTitle" placeholder="Task Title">
+        <input type="text" id="taskDescription" placeholder="Task Description">
+        <input type="date" id="taskDueDate">
+        <select id="taskPriority">
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+        </select>
+        <button id="addTaskButton">Add Task</button>
+
+        <!-- Filters -->
+        <div id="filters">
+            <input type="text" id="filterTitle" placeholder="Filter by Title">
+            <input type="date" id="filterDueDate">
+            <select id="filterPriority">
+                <option value="">All Priorities</option>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+        </div>
+
+        <!-- Sorting Options -->
+        <div id="sortOptions">
+            <select id="sortTasks">
+                <option value="alphabetical">Alphabetical (A-Z)</option>
+                <option value="reverseAlphabetical">Reverse Alphabetical (Z-A)</option>
+                <option value="soonest">Soonest to Latest</option>
+                <option value="latest">Latest to Soonest</option>
+            </select>
+        </div>
+        <div id="taskList"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
